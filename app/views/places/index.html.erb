@@ -5,7 +5,7 @@
     <p><%= place.description %></p><br />
 
     <% if place.user.present? %>
-      <small><%= place.user.email %></small>
+      <small>Added by: <%= place.user.email %></small>
     <% end %>
 
     <% if place.comments.present? %>
@@ -15,10 +15,18 @@
         <b><%= place.comments.last.humanized_rating %></b> -
       <% end %>
       <%= place.comments.last.message %>
-      <small><%= place.comments.last.user.email %></small>
+      <small>&nbsp;&nbsp;&nbsp;- <%= place.comments.last.user.email %></small>
       </blockquote>
     </div>
     <% end %>
+
+    <% if place.photos.present? %>
+      <div class="col-12">      
+        <%= image_tag place.photos.last.picture %>
+      </div>
+    <% end %>    
+
+
     
   </div>
 <% end %>
