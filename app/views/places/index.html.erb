@@ -38,11 +38,13 @@
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
-    <p><%= place.description %></p><br />
+    <p><strong><%= place.description %></strong></p><br />
 
     <% if place.user.present? %>
       <small>Added by: <%= place.user.email %></small>
     <% end %>
+
+    <div class="col-10 offset-1">
 
     <% if place.comments.present? %>
     <div class="col-12">
@@ -58,10 +60,12 @@
 
     <% if place.photos.present? %>
       <div class="col-12">      
-        <%= image_tag place.photos.last.picture, class:"image" %>
+        <%= image_tag place.photos.last.picture, class:"image_main" %>
       </div>
+      <br />
     <% end %>
     
+  </div>
   </div>
 <% end %>
 

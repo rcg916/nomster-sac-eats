@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background: image_url('food.png');
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
 
 .navbar {
@@ -100,14 +100,14 @@ body {
 
 blockquote {
   background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  border-left: 10px solid #FAC564;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
 
 blockquote:before {
-  color: #ccc;
+  color: #FAC564;
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
@@ -119,6 +119,12 @@ blockquote p {
   display: inline;
 }
 
+.image_main {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2%;
+}
+
 .image {
   max-width: 100%;
   height: auto;
@@ -127,7 +133,6 @@ blockquote p {
 .image_div {
   background-color: #FAC564;  
   display: inline-block;
-  border: 2px;
   border-radius: 2%;  
 }
 
@@ -154,4 +159,12 @@ blockquote p {
 
 .carousel {
   box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+h1 a:link, h2 a:link {
+  text-decoration:none;
+}
+
+.blue {
+  color:#0275d8;
 }

@@ -5,10 +5,10 @@
     </div>
 
     <div class="col-8">
-      <h1><%= @user.email %></h1>
+      <h1 class="blue"><%= @user.email %></h1>
       <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
-      <h4><%= @user.comments.count %> total comments</h4>
-      <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
+      <h4><i><%= @user.comments.count %> total comments</i></h4>
+      <h4><i><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</i></h4>
     </div>
   </div>
   <div class="clear"></div>
@@ -17,7 +17,7 @@
 <br /><br />
 <h1 class="text-center">My Comments</h1>
 <br /><br />
-<div class="row">
+<div class="row col-10 offset-1">
   <% @user.comments.each do |comment| %>
     <div class="col-12 col-sm-6">
       <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
@@ -39,7 +39,7 @@
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br />
-    <p><%= place.description %></p><br />
+    <p><strong><%= place.description %></strong></p><br />
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
