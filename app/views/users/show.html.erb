@@ -41,10 +41,6 @@
     <i><%= place.address %></i><br />
     <p><strong><%= place.description %></strong></p><br />
 
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-    <% end %>
-
     <% if place.comments.present? %>
       <div class="col-12">
         <blockquote>

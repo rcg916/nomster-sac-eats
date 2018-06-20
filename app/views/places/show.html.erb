@@ -63,7 +63,10 @@
           <b><%= comment.humanized_rating %></b> -
         <% end %>
         <%= comment.message %>
-        <small><%= comment.user.email %></small>
+        <div class="text-center">
+          <small>&nbsp;&nbsp;&nbsp;- <%= comment.user.email %>
+          </small>
+        </div>
       </blockquote>
 
     </div>
