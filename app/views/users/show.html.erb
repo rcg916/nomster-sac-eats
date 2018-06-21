@@ -27,7 +27,7 @@
         <% end %>
         <%= comment.message %>
         <div class="text-center">
-        <small><i>- <%= comment.user.email %></i></small>
+        <small><i>-&nbsp;<%= comment.user.email %></i></small>
         </div>
       </blockquote>
     </div>
@@ -50,8 +50,8 @@
             <b><%= place.comments.last.humanized_rating %></b> -
           <% end %>
           <%= place.comments.last.message %>
-          <div class="comment">
-            <small><i>- <%= place.comments.last.user.email %></i></small>
+          <div class="offset-1">
+            <small><i>-&nbsp;<%= place.comments.last.user.email %></i></small>
           </div>
         </blockquote>
       </div>
